@@ -2,6 +2,10 @@ import express, { Express, Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import itemRoute from "./routes/item.route";
+import * as dotenv from 'dotenv';
+
+// Load environment variables from .env.dev file
+dotenv.config({ path: '.env.dev' });
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
